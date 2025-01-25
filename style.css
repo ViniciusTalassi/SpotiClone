@@ -1,0 +1,424 @@
+/* Reset e estilo básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+a {
+  color: #b91d1d;
+  /* Verde Spotify */
+  text-decoration: none;
+  /* Remove o sublinhado dos links */
+}
+
+a:hover {
+  color: #d71e1e;
+  /* Verde mais claro para hover */
+}
+
+/* Estrutura principal do aplicativo */
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#principal {
+  display: flex;
+  flex-grow: 1;
+  background-color: #121212;
+  overflow: hidden;
+}
+
+/* Estilo da barra lateral */
+#latNav {
+  width: 246px;
+  background-color: #000;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#latNav .logo {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+#latNav .logo img {
+  margin-right: 10px;
+}
+
+#latNav .logo span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.menu-lateral {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.menu-lateral li {
+  margin-bottom: 10px;
+}
+
+.menu-lateral a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.menu-lateral a:hover,
+.menu-lateral a.ativo {
+  background-color: #333;
+  border-radius: 5px;
+}
+
+#underList {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+#underList button {
+  background-color: #282828;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+#underList button:hover {
+  background-color: #333;
+}
+
+/* Divisão visual */
+.divisao {
+  border: 1px solid #333;
+  margin: 20px 0;
+}
+
+/* Estilo do conteúdo principal */
+#feed {
+  flex-grow: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    #121212 50%,
+    #121212 100%
+  );
+  overflow-y: auto;
+}
+
+#topNav {
+  position: sticky;
+  top: 0;
+  background-color: #121212;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+#arrowMenu button {
+  background: none;
+  border: none;
+  margin-right: 10px;
+}
+
+#arrowMenu button img {
+  width: 24px;
+  height: 24px;
+}
+
+#btnTopNav #user_bttn {
+  position: relative;
+}
+
+#btnTopNav #dropdownMenuButton1 {
+  background-color: #282828;
+  border: none;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#btnTopNav .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #282828;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 5px 0;
+  display: none;
+}
+
+#btnTopNav #user_bttn:hover .dropdown-menu {
+  display: block;
+}
+
+#btnTopNav .dropdown-menu a {
+  color: #fff;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+#btnTopNav .dropdown-menu a:hover {
+  background-color: #333;
+}
+
+#main {
+  padding: 20px;
+}
+
+#feedHeader h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+#playlistsRecentes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.feedPlaylist h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.feedPlaylist a.ver-tudo {
+  color: #b3b3b3;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.feedPlaylist a.ver-tudo:hover {
+  text-decoration: underline;
+}
+
+.playlists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.playlists li {
+  width: calc(16% - 20px);
+  background-color: #181818;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.playlists li:hover {
+  background-color: #282828;
+}
+
+.playlists li img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.playlists li span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.playlists li p {
+  color: #b3b3b3;
+  font-size: 0.9em;
+}
+
+.playlists li button {
+  background-color: #b91d1d;
+  border: none;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.playlists li:hover button {
+  opacity: 1;
+}
+
+/* Rodapé */
+#audioBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  padding: 20px 0;
+  background-color: #151515;
+  /* Cor de fundo alterada para um cinza mais claro */
+  border-top: 1px solid #151515;
+  /* Borda superior ajustada */
+}
+
+#audioBar .botomIcon {
+  width: auto;
+  height: 90px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px 20px;
+}
+
+#audioBar .botomIcon img {
+  filter: brightness(0) invert(1);
+  /* Ajusta as cores das imagens dos ícones */
+}
+
+#caixaCentral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#caixaSetas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.menu-rodape {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  justify-content: flex-start;
+}
+
+.menu-rodape li {
+  margin-right: 20px;
+}
+
+.menu-rodape a {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player audio {
+  border: 2px solid #fff;
+  border-radius: 50px;
+  margin: 10px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #151515;
+}
+
+.menu-rodape a:hover {
+  color: #fff;
+}
+
+#caixaSetas button {
+  background-color: #151515;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+#caixaSetas button:hover {
+  background-color: #d71e1e;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .playlists li {
+    width: calc(24% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  #latNav {
+    width: 200px;
+  }
+
+  .playlists li {
+    width: calc(33.33% - 20px);
+  }
+
+  #btnTopNav .dropdown-toggle {
+    padding: 3px 10px;
+  }
+
+  #topNav {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #principal {
+    flex-direction: column;
+  }
+
+  #latNav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .playlists li {
+    width: calc(50% - 20px);
+  }
+
+  #feed {
+    padding: 0 10px;
+  }
+
+  #btnTopNav .dropdown-toggle {
+    padding: 3px 8px;
+  }
+
+  #topNav {
+    padding: 0 5px;
+  }
+}

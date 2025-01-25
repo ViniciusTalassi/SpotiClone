@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Spotclone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div id="app">
+    <div id="principal">
+      <nav id="latNav">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <img src="images/favicon.ico" alt="Logo do Spotify" width="40" height="40">
+          <span>Spotclone</span>
+        </a>
+
+        <!-- Barra Lateral -->
+        <ul class="menu-lateral">
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Buscar</a></li>
+          <li><a href="#">Sua Biblioteca</a></li>
+        </ul>
+
+        <!-- Botões Criar Playlist e Músicas Curtidas -->
+        <div id="underList">
+          <button>Criar Playlist</button>
+          <button>Músicas Curtidas</button>
+        </div>
+
+        <hr class="divisao">
+
+        <!-- Botão Instalar Aplicativo -->
+        <a href="#" class="botao-instalar">Sair</a>
+        <a href="#" class="botao-instalar">Instalar App</a>
+      </nav>
+
+      <!-- Conteúdo Principal -->
+      <div id="feed">
+        <!-- Menu Superior -->
+        <nav id="topNav">
+          <!-- Setas de Navegação -->
+          <div id="arrowMenu">
+            <button><img src="images/anterior-icon.png" alt="Anterior" height="24" width="24"></button>
+            <button><img src="images/proximo-icon.png" alt="Próximo" height="24" width="24"></button>
+          </div>
+
+          <!-- Perfil do Usuário -->
+          <div id="btnTopNav">
+            <div id="user_bttn">
+              <button id="dropdownMenuButton1">
+                Vinitgp
+              </button>
+              <div class="dropdown-menu">
+                <a href="#">Sair</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Conteúdo Principal do Feed -->
+        <main id="main">
+          <!-- Seção Inicial (Cabeçalho) -->
+          <section id="feedHeader">
+            <h2>Bem-vindo de volta</h2>
+            <!--Playlist funcional do spotify-->
+            <iframe style="border-radius:12px"
+              src="https://open.spotify.com/embed/playlist/53Zydwm8ww8fLpujpslXMe?utm_source=generator" width="100%"
+              height="352" frameBorder="0" allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+            <ul id="playlistsRecentes">
+              <!-- Lista de Playlists Recentes -->
+            </ul>
+          </section>
+
+          <!-- Top Mixes -->
+          <section class="feedPlaylist">
+            <h4><a href="#"><b>Seus principais mixes</b></a></h4>
+            <a class="ver-tudo" href="#">VER TODOS</a>
+            <ul class="playlists">
+              <li>
+                <img src="images/1.jpeg" alt="Mix Pop">
+                <button type="button">Tocar</button>
+                <span>Mix Pop</span>
+                <p>SHY Martin, Lauv, Sia e mais</p>
+              </li>
+
+              <li>
+                <img src="images/2.jpeg" alt="Mix Chill">
+                <button type="button">Tocar</button>
+                <span>Mix Chill</span>
+                <p>Lauv, Oh Wonder, The Chainsmokers e mais</p>
+              </li>
+
+              <li>
+                <img src="images/3.jpeg" alt="Mix Moody">
+                <button type="button">Tocar</button>
+                <span>Mix Moody</span>
+                <p>Charlie Puth, Oh Wonder, Alec Benjamin e mais</p>
+              </li>
+
+              <li>
+                <img src="images/4.jpeg" alt="Mix Latino">
+                <button type="button">Tocar</button>
+                <span>Mix Latino</span>
+                <p>Timothy Infinite, Shakira e mais</p>
+              </li>
+
+              <li>
+                <img src="images/5.jpeg" alt="Mix Hindi">
+                <button type="button">Tocar</button>
+                <span>Mix Hindi</span>
+                <p>Ritviz, Nuclea, Atif Aslam e mais</p>
+              </li>
+
+              <li>
+                <img src="images/6.jpeg" alt="Mix 2010s">
+                <button type="button">Tocar</button>
+                <span>Mix 2010s</span>
+                <p>The Fat Rat, Alan Walker, The Chainsmokers e mais</p>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Lançamentos Populares -->
+          <section class="feedPlaylist">
+            <h4><a href="#">Lançamentos Populares</a></h4>
+            <a class="ver-tudo" href="#">VER TODOS</a>
+            <ul class="playlists">
+              <li>
+                <img src="images/queen.png" alt="Queen">
+                <button type="button">Tocar</button>
+                <span>We Will Rock You</span>
+                <p>Queen</p>
+
+              </li>
+
+              <li>
+                <img src="images/this is why.jpg" alt="This Is Why">
+                <button type="button">Tocar</button>
+                <span>This Is Why</span>
+                <p>Paramore</p>
+              </li>
+
+              <li>
+                <img src="images/igotissu.jpg" alt="I GOT ISSUES">
+                <button type="button">Tocar</button>
+                <span>I GOT ISSUES</span>
+                <p>YG</p>
+              </li>
+
+              <li>
+                <img src="images/uhoh.jpg" alt="Uh Oh">
+                <button type="button">Tocar</button>
+                <span>Uh Oh</span>
+                <p>Tate McRae</p>
+              </li>
+
+              <li>
+                <img src="images/bodypaint.jpg" alt="Body Paint">
+                <button type="button">Tocar</button>
+                <span>Body Paint</span>
+                <p>Arctic Monkeys</p>
+              </li>
+            </ul>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- Rodapé -->
+    <div id="footer">
+      <div id="audioBar">
+        <div id="musicaPlay"></div>
+
+        <div id="botomIcon">
+          <ul class="menu-rodape">
+            <li>
+              <a href="#" class="ativo">
+                <img src="images/home-icon.png" alt="Ícone Início" height="20" width="20">
+                Início
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/search-icon.png" alt="Ícone Buscar" height="20" width="20">
+                Buscar
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/library-icon.png" alt="Ícone Biblioteca" height="20" width="20">
+                Sua Biblioteca
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/get-app-icon.png" alt="Ícone Obter App" height="20" width="20">
+                Obter App
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
